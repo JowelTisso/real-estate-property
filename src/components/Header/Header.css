@@ -1,0 +1,18 @@
+.header {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.app-title {
+  margin-left: 2rem;
+  color: var(--primary-color);
+}
