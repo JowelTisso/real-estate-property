@@ -1,3 +1,21 @@
+:root {
+  --primary-color: #818cf8;
+  --bg-color: #fff;
+  --bg-color-2: #f5f9f7;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
 .App {
   text-align: center;
+}
+
+/* utils */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
