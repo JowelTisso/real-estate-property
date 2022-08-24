@@ -1,0 +1,77 @@
+.card {
+  width: 32%;
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.coverImg {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.section-details {
+  min-height: 14rem;
+  padding: 1rem;
+}
+
+.section-details .card-price,
+.card-title,
+.card-description {
+  text-align: left;
+}
+
+.card-price {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--txt-color-light);
+}
+
+.price {
+  font-weight: 500;
+  font-size: 1.9rem;
+  color: var(--primary-color);
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.card-description {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.icon-details {
+  text-align: left;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.specfication {
+  flex-grow: 1;
+  display: flex;
+}
+
+.count {
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 1rem;
+}
+
+.badge {
+  position: absolute;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
+  top: 1rem;
+  right: 1rem;
+}

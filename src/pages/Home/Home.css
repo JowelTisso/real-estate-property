@@ -1,4 +1,50 @@
-.content-wrapper {
-  height: 95vh;
+.wrapper {
   background-color: var(--bg-color-2);
+}
+
+.content-wrapper {
+  min-height: 95vh;
+  padding: 3rem 6rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.search-input {
+  border: 1px solid var(--border-color);
+  outline: 0;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+}
+
+.section-filter {
+  background-color: var(--bg-color);
+  height: 10rem;
+  margin: 2rem 0;
+  display: flex;
+  padding: 1rem 3rem;
+}
+
+.btn-search {
+  background-color: var(--primary-color);
+  border: 0;
+  height: 4rem;
+  width: 10rem;
+  color: var(--txt-color-secondary);
+  font-size: 1.5rem;
+}
+
+.section-content {
+  min-height: 60vh;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }

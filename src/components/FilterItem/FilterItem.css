@@ -1,0 +1,20 @@
+.filter-item {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-item-title {
+  color: var(--txt-color-light);
+  font-size: 1.5rem;
+}
+
+.filter-item-content {
+  color: var(--txt-color);
+  font-size: 1.8rem;
+  border: none;
+}
+
+.filter-input {
+  border: none;
+  outline: none;
+}
