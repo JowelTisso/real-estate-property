@@ -2,6 +2,7 @@
   width: 32%;
   background-color: var(--bg-color);
   position: relative;
+  height: 100%;
 }
 
 .coverImg {
@@ -78,4 +79,16 @@
 
 .badge-icon {
   font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 1120px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .card {
+    width: 100%;
+  }
 }

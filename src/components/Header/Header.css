@@ -27,3 +27,23 @@
   font-weight: 400;
   font-size: 1.8rem;
 }
+
+.favourite-icon {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+  .header-menu {
+    visibility: hidden;
+  }
+
+  .favourite-icon {
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .app-title {
+    font-size: 1.9rem;
+  }
+}

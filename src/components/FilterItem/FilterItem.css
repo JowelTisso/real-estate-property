@@ -19,3 +19,12 @@
   outline: none;
   width: 15rem;
 }
+
+@media only screen and (max-width: 620px) {
+  .filter-item {
+    flex-grow: 0;
+  }
+  .filter-item-content {
+    margin-top: 1rem;
+  }
+}

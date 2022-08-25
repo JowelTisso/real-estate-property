@@ -19,6 +19,7 @@ const PropertyProvider = ({ children }) => {
     maxPrice: "50000",
     categoryExternalID: "4",
   });
+  const [isKeywordSearch, setIsKeywordSearch] = useState(false);
 
   const loadProperty = async () => {
     setLoading(true);
@@ -43,6 +44,7 @@ const PropertyProvider = ({ children }) => {
     const res = await GET(url);
     setProperties(res?.data.hits);
     setLoading(false);
+    setIsKeywordSearch(false);
   };
 
   const changeFilterValues = (values) => {
@@ -58,6 +60,8 @@ const PropertyProvider = ({ children }) => {
         filterValues: filterValues,
         changeFilterValues: changeFilterValues,
         searchProperty: searchProperty,
+        isKeywordSearch: isKeywordSearch,
+        setIsKeywordSearch: setIsKeywordSearch,
       }}
     >
       {children}
