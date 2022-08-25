@@ -2,7 +2,7 @@ import "./Header.css";
 import React from "react";
 import logo from "../../assets/favicon.png";
 import { useNavigate } from "react-router-dom";
-import { IoHeart, IoHeartOutline } from "react-icons/io5";
+import { IoHeartOutline } from "react-icons/io5";
 
 const Header = () => {
   const navigate = useNavigate();
