@@ -9,4 +9,5 @@ export const API = Object.freeze({
 
 export const COLOR = Object.freeze({
   primary: "#818cf8",
+  loader: "#5ee5c0",
 });

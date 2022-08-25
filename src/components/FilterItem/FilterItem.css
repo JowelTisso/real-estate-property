@@ -17,4 +17,5 @@
 .filter-input {
   border: none;
   outline: none;
+  width: 15rem;
 }

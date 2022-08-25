@@ -3,8 +3,13 @@
   width: 100%;
   background-color: var(--bg-color);
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
+}
+
+.header-logo-section {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -15,4 +20,10 @@
 .app-title {
   margin-left: 2rem;
   color: var(--primary-color);
+}
+
+.header-menu {
+  color: var(--primary-color);
+  font-weight: 400;
+  font-size: 1.8rem;
 }

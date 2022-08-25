@@ -1,50 +1,39 @@
 import "./FilterItem.css";
-import React, { useEffect, useState } from "react";
-import { debounce } from "../../utils/debounce";
-import { GET_AUTO_COMPLETE } from "../../utils/axios";
+import React from "react";
+import { useProperty } from "../../context/Provider/PropertyProvider";
 
-const FilterItem = ({
-  type,
-  placeholder,
-  defaultValue,
-  data,
-  isDynamic = false,
-}) => {
-  const [keyword, setKeyword] = useState(defaultValue);
-  const [optionList, setOptionList] = useState(isDynamic ? [] : data);
+const FilterItem = ({ type, data }) => {
+  const { changeFilterValues } = useProperty();
 
-  const onContentChange = ({ target }) => {
-    setKeyword(target.value);
+  const getFilterValues = ({ target }) => {
+    const item = data.items.find(
+      (item) => item.name.toLowerCase() === target.value.toLowerCase()
+    );
+
+    const filterItem = {
+      name: data.queryName,
+      value: data.queryName.toLowerCase().includes("price")
+        ? item.value.replace("$", "")
+        : item.value,
+    };
+    changeFilterValues(filterItem);
   };
-
-  const searchAutoCompleteTerm = debounce(async (keyword) => {
-    const res = await GET_AUTO_COMPLETE(keyword);
-    setOptionList(res?.data.hits);
-  });
-
-  useEffect(() => {
-    if (isDynamic && keyword !== "") {
-      searchAutoCompleteTerm(keyword);
-    }
-  }, [keyword]);
 
   return (
     <div className="filter-item flex-grow-1x flex-center">
       <p className="filter-item-title">{type}</p>
-      <input
-        className="filter-input filter-item-content"
-        type="text"
+      <select
         name={type}
-        placeholder={placeholder}
-        list={type}
-        value={keyword}
-        onChange={onContentChange}
-      ></input>
-      <datalist id={type}>
-        {optionList?.map((item) => (
-          <option key={item.id} value={item.name} />
+        id={type}
+        className="filter-input filter-item-content"
+        onChange={getFilterValues}
+      >
+        {data.items.map((item) => (
+          <option key={item.id} value={item.name}>
+            {item.name}
+          </option>
         ))}
-      </datalist>
+      </select>
     </div>
   );
 };
